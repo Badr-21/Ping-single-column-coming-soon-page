@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*## Colors
+    ### Primary*/
+    --Blue: hsl(223, 87%, 63%);
+    /*### Secondary*/
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    /*### Neutral*/
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+header img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--Gray);
+    margin-bottom: .4rem;
+}
+
+.container h1 span {
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+}
+
+.container p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 2rem;
+}
+
+.container .form {
+    margin-bottom: 1rem;
+}
+
+.container .form .email {
+    width: 22rem;
+    height: 2.5rem;
+    margin: 0 .8rem 0 0;
+    padding-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: 0.0625rem solid var(--Pale-Blue);
+    border-radius: 1.5rem; 
+}
+
+.container .form .email::placeholder {
+    color: var(--Pale-Blue);
+}
+
+.container .form button {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--Blue);
+    border-radius: 1.5rem; 
+    border: 0.0625rem solid var(--Blue);
+    box-shadow: 0 .5rem 1rem rgba(211, 211, 211, .5)
+}
+
+.container .form p {
+    font-size: .8rem;
+    font-weight: 300;
+    padding: .5rem 0 0 1rem;
+    color: var(--Light-Red);
+}
+
+.container .image {
+    display: flex;
+    justify-content: center;
+}
+
+.container .image img {
+    width: 50%;
+}
+
+footer .accounts {
+    width: 6rem;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .accounts > div {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    color: blue;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .copyright {
+    font-size: 1rem;
+    color: var(--Gray);
+}
+
+@media(hover: hover) {
+    .container .form button:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+
+    footer .accounts > div:hover  {
+        cursor: pointer;
+        color: white;
+        background-color: var(--Blue)
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        margin-bottom: 2.5rem;
+    }
+
+    header img {
+        width: 70%;
+    }
+
+    .container {
+        margin-bottom: 8rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .container p {
+        font-size: .9rem;
+        margin-bottom: 2rem;
+    }
+
+    .container .form {
+        margin-bottom: 2rem;
+    }
+
+    .container .form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .form .email {
+        width: 17rem;
+        padding-left: 2rem;
+        margin: 0 0 .8rem 0;
+        font-size: .8rem;
+    }
+
+    .container .form button {
+        width: 17rem;
+        height: 2.5rem;
+        font-size: .8rem;
+    }
+
+    .container .image img {
+        width: 85%;
+    }
+
+    footer .accounts {
+        width: 8rem;
+        margin: 0 auto 2rem;
+    }
+
+    footer .copyright {
+        font-size: .8rem;
+    }
+}
